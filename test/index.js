@@ -26,6 +26,20 @@ describe('gulp-html-bem-validator', () => {
             assert.strictEqual(countBemWarning, 1)
         })
 
+        it('should be one error element-within-an-element', () => {
+            const html = fs.readFileSync(path.join(__dirname, '/fixtures/element-within-an-element.html'))
+            const {countBemWarning} = htmlBemValidator1.htmlBemValidator({content: html.toString()})
+
+            assert.strictEqual(countBemWarning, 1)
+        })
+
+        it('should not be errors because a valid bem html is passed', () => {
+            const html = fs.readFileSync(path.join(__dirname, '/fixtures/page__elements.html'))
+            const {countBemWarning} = htmlBemValidator1.htmlBemValidator({content: html.toString()})
+
+            assert.strictEqual(countBemWarning, 0)
+        })
+
         it('output the success result to the console', () => {
             const html = fs.readFileSync(path.join(__dirname, '/fixtures/valid.html'))
 
@@ -36,6 +50,12 @@ describe('gulp-html-bem-validator', () => {
             const html = fs.readFileSync(path.join(__dirname, '/fixtures/no-valid-error-1.html'))
 
             htmlBemValidator1.htmlBemValidatorResult({name: 'no-valid-error-1.html', content: html.toString()})
+        })
+
+		it('output the error result to the console', () => {
+            const html = fs.readFileSync(path.join(__dirname, '/fixtures/element-within-an-element.html'))
+
+            htmlBemValidator1.htmlBemValidatorResult({name: 'element-within-an-element.html', content: html.toString()})
         })
     })
 })
