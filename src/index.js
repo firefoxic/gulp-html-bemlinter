@@ -188,7 +188,7 @@ function checkBemElement(element) {
 	})
 }
 
-function htmlBemValidator({ content }) {
+function htmlBemlinter({ content }) {
 	const htmlThree = htmlParser.parse(content)
 	const treeAst = htmlThreeFormatAst(htmlThree)
 
@@ -201,8 +201,8 @@ function htmlBemValidator({ content }) {
 	return result
 }
 
-function htmlBemValidatorResult({ name, content }) {
-	const { countBemWarning, treeAst } = htmlBemValidator({ name, content })
+function htmlBemlinterResult({ name, content }) {
+	const { countBemWarning, treeAst } = htmlBemlinter({ name, content })
 
     if (countBemWarning) {
         console.log(CAT(treeAst))
@@ -213,6 +213,6 @@ function htmlBemValidatorResult({ name, content }) {
 }
 
 module.exports = {
-	htmlBemValidator,
-	htmlBemValidatorResult
+	htmlBemlinter,
+	htmlBemlinterResult
 }
