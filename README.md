@@ -1,38 +1,42 @@
-# gulp-html-bem-validator  
+# gulp-html-bemlinter
+
 [![NPM version][npm-image]][npm-url] [![Build status][travis-image]][travis-url]
-> Gulp plugin for validation a bem html
 
-# Usage
+Gulp plugin for linting a bem html
 
-First, install `gulp-html-bem-validator` as a development dependency:
+## Usage
 
-```shell
-npm install --save-dev gulp-html-bem-validator
+First, install `gulp-html-bemlinter` as a development dependency:
+
+```bash
+npm install --save-dev gulp-html-bemlinter
 ```
 
-Then, add it to your `gulpfile.js`:
+Then, add it to your `gulpfile.js`:
 
-# Simple example
-```javascript
-var gulp = require('gulp');
-var gulpHtmlBemValidator = require('gulp-html-bem-validator');
+## Simple example
 
-gulp.task('html-bem-validator', () => {
-  gulp.src('pages/*.html')
-    .pipe(gulpHtmlBemValidator())
-    .pipe(gulp.dest('build/'));
-});
+```js
+import gulp from "gulp" 
+import bemlinter from "gulp-html-bemlinter"
+
+function lintBemMarkup () {
+	return gulp.src("pages/**/*.html")
+		.pipe(bemlinter())
+}
 ```
 
-# An example of outputting results to a console
- 
-## Success 
+## An example of outputting results to a console
+
+### Success
+
 ![success-result-example](https://lh3.googleusercontent.com/CI__G-pJAk9uyxFKABAVeePzTYCmBOgDkRGwgnE1xqd0dZNjraxTy0BKpDJ4iI4vLUCsugXCnWTWFqKtXT_irGa-ZGlSdX_yMyRzvwx7Fb4IWPeRvBamuOq-LuLjvA8ZVLNsHvE45Q=w1157-h32-no)
 
-## Error
+### Error
+
 ![error-result-example](https://lh3.googleusercontent.com/aw2V-r8uRt25GeR3NqefAVqhomPef7z-j7zv5-vTeUphd4Rhfwo60J05qvMRMO5faHGVJOeGuWRFLOim0krO-dx2amtn7kHSXUMrdsxBIdyh9QZ0UPJ75XbKsxrz5ROckhl2dh3oAw=w1227-h375-no)
 
-[travis-url]: https://travis-ci.com/dDenysS/gulp-html-bem-validator
-[travis-image]: https://travis-ci.org/dDenysS/gulp-html-bem-validator.svg?branch=master
-[npm-url]: https://npmjs.org/package/gulp-html-bem-validator
-[npm-image]: https://badge.fury.io/js/gulp-html-bem-validator.svg
+[travis-url]: https://travis-ci.com/firefoxic/gulp-html-bemlinter
+[travis-image]: https://travis-ci.org/firefoxic/gulp-html-bemlinter.svg?branch=master
+[npm-url]: https://npmjs.org/package/gulp-html-bemlinter
+[npm-image]: https://badge.fury.io/js/gulp-html-bemlinter.svg

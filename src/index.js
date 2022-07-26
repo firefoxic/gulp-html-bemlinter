@@ -10,50 +10,50 @@ let prevNameHtmlColor = 'white'
 let countBemWarning = 0
 
 function resetInitialState() {
-    prevNameHtmlNode = ''
-    prevNameHtmlColor = 'white'
-    countBemWarning = 0
+	prevNameHtmlNode = ''
+	prevNameHtmlColor = 'white'
+	countBemWarning = 0
 }
 
-function createNode({label, color}) {
-    return {
-        label,
-        color,
-        nodes: []
-    }
+function createNode({ label, color }) {
+	return {
+		label,
+		color,
+		nodes: []
+	}
 }
 
 function createLabelTree(element) {
-    let label = element.tagName
-    if (element.id) label += `#${element.id.split(' ').join('#')}`
-    if (element.classNames.length) label += `.${element.classNames.join('.')}`
+	let label = element.tagName
+	if (element.id) label += `#${element.id.split(' ').join('#')}`
+	if (element.classNames.length) label += `.${element.classNames.join('.')}`
 
-    return label
+	return label
 }
 
 function generateRandomColor(name) {
-    if (prevNameHtmlNode !== name) {
-        const color = randomItem(COLORS)
-        if (color === prevNameHtmlColor) {
-            prevNameHtmlColor = color
-            return 'black'
-        }
+	if (prevNameHtmlNode !== name) {
+		const color = randomItem(COLORS)
+		if (color === prevNameHtmlColor) {
+			prevNameHtmlColor = color
+			return 'black'
+		}
 
-        prevNameHtmlColor = color
-        prevNameHtmlNode = name
-        return color
-    }
+		prevNameHtmlColor = color
+		prevNameHtmlNode = name
+		return color
+	}
 
-    return prevNameHtmlColor
+	return prevNameHtmlColor
 }
 
 function htmlThreeFormatAst(htmlTree) {
-    let ast = {}
-    for (const element of htmlTree.childNodes) {
-        if (element.nodeType !== 1) continue
-        ast = createNode({label: createLabelTree(element), color: generateRandomColor(element.tagName)})
+	let ast = {}
+	for (const element of htmlTree.childNodes) {
+		if (element.nodeType !== 1) continue
+		ast = createNode({ label: createLabelTree(element), color: generateRandomColor(element.tagName) })
 
-        element.parentElement = null
+		element.parentElement = null
 
 		element.classNames.forEach(name => {
 			if (name.split('__').length === 1 && name.split('--').length === 1) {
@@ -68,14 +68,14 @@ function htmlThreeFormatAst(htmlTree) {
 			}
 		})
 
-        formatTree({
-            htmlNodes: element.childNodes,
-            astNodes: ast.nodes,
-            parent: element
-        })
-    }
+		formatTree({
+			htmlNodes: element.childNodes,
+			astNodes: ast.nodes,
+			parent: element
+		})
+	}
 
-    return ast
+	return ast
 }
 
 
@@ -85,14 +85,14 @@ function htmlThreeFormatAst(htmlTree) {
  * @param {Object} elements.element - The element of a node-html-parse three.
  * @param {Object} elements.parent - The parent of a element node-html-parse three.
  */
-function copyParentPrefixes({element, parent}) {
-    if (!parent || !parent.customDataSet) {
-        return
-    }
+function copyParentPrefixes({ element, parent }) {
+	if (!parent || !parent.customDataSet) {
+		return
+	}
 
-    for (const prefix in parent.customDataSet.prefixes) {
-        element.customDataSet.prefixes[prefix] = prefix
-    }
+	for (const prefix in parent.customDataSet.prefixes) {
+		element.customDataSet.prefixes[prefix] = prefix
+	}
 }
 
 /**
@@ -101,14 +101,14 @@ function copyParentPrefixes({element, parent}) {
  * @param {Object} elements.element - The element of a node-html-parse three.
  * @param {Object} elements.parent - The parent of a element node-html-parse three.
  */
-function addClassesAsPrefixes({element, parent}) {
-    copyParentPrefixes({element, parent})
+function addClassesAsPrefixes({ element, parent }) {
+	copyParentPrefixes({ element, parent })
 
-    element.classNames.forEach(name => {
-        if (name.split('__').length === 1 && name.split('--').length === 1) {
-            element.customDataSet.prefixes[name] = name
-        }
-    })
+	element.classNames.forEach(name => {
+		if (name.split('__').length === 1 && name.split('--').length === 1) {
+			element.customDataSet.prefixes[name] = name
+		}
+	})
 }
 
 /**
@@ -118,91 +118,91 @@ function addClassesAsPrefixes({element, parent}) {
  * @param {Object} nodes.astNodes[] - The ast tree classic-ancii-tree.
  * @param {Object} nodes.parent - The parent element of htmlNodes.
  */
-function formatTree({htmlNodes, astNodes, parent}) {
-    for (const element of htmlNodes) {
-        if (element.nodeType !== 1) continue
+function formatTree({ htmlNodes, astNodes, parent }) {
+	for (const element of htmlNodes) {
+		if (element.nodeType !== 1) continue
 
-        if (!element.customDataSet) {
-            element.customDataSet = {
-                prefixes: {},
-                parentElement: parent
-            }
-        }
+		if (!element.customDataSet) {
+			element.customDataSet = {
+				prefixes: {},
+				parentElement: parent
+			}
+		}
 
-        addClassesAsPrefixes({element, parent})
-        checkBemElement(element)
+		addClassesAsPrefixes({ element, parent })
+		checkBemElement(element)
 
-        const node = createNode({
-            label: createLabelTree(element),
-            color: element.customDataSet.hasError ? 'red' : generateRandomColor(element.tagName)
-        })
-        astNodes.push(node)
+		const node = createNode({
+			label: createLabelTree(element),
+			color: element.customDataSet.hasError ? 'red' : generateRandomColor(element.tagName)
+		})
+		astNodes.push(node)
 
 
-        if (element.childNodes.length) {
-            formatTree({htmlNodes: element.childNodes, astNodes: node.nodes, parent: element})
-        }
-    }
+		if (element.childNodes.length) {
+			formatTree({ htmlNodes: element.childNodes, astNodes: node.nodes, parent: element })
+		}
+	}
 }
 
 function checkBemElement(element) {
-    if (element.classNames.join().indexOf('__') < 0 &&
-        element.classNames.join().indexOf('--') < 0) {
-        return false
-    }
+	if (element.classNames.join().indexOf('__') < 0 &&
+		element.classNames.join().indexOf('--') < 0) {
+		return false
+	}
 
-    element.classNames.forEach(classItem => {
-        let prefixCorrect = false
-        if (classItem.split('__').length > 2) {
-            countBemWarning++
-            element.customDataSet.hasError = true
-        } else {
-            if (classItem.split('__').length > 1) {
-                const prefix = classItem.split('__')[0]
+	element.classNames.forEach(classItem => {
+		let prefixCorrect = false
+		if (classItem.split('__').length > 2) {
+			countBemWarning++
+			element.customDataSet.hasError = true
+		} else {
+			if (classItem.split('__').length > 1) {
+				const prefix = classItem.split('__')[0]
 
-                if (element.customDataSet.prefixes[prefix]) {
-                    prefixCorrect = true
-                }
+				if (element.customDataSet.prefixes[prefix]) {
+					prefixCorrect = true
+				}
 
-                if (!prefixCorrect) {
-                    countBemWarning++
+				if (!prefixCorrect) {
+					countBemWarning++
 
-                    element.customDataSet.hasError = true
-                }
-            }
-        }
+					element.customDataSet.hasError = true
+				}
+			}
+		}
 
-        // modifier
-        if (classItem.split('--').length > 1) {
-            let modifierPrefixCorrect = false
-            const modifierPrefix = classItem.split('--')[0]
+		// modifier
+		if (classItem.split('--').length > 1) {
+			let modifierPrefixCorrect = false
+			const modifierPrefix = classItem.split('--')[0]
 
-            if (~element.classNames.indexOf(modifierPrefix)) modifierPrefixCorrect = true
+			if (~element.classNames.indexOf(modifierPrefix)) modifierPrefixCorrect = true
 
-            if (!modifierPrefixCorrect) {
-                countBemWarning++
+			if (!modifierPrefixCorrect) {
+				countBemWarning++
 
-                element.customDataSet.hasError = true
-            }
-        }
-    })
+				element.customDataSet.hasError = true
+			}
+		}
+	})
 }
 
-function htmlBemValidator({content}) {
-    const htmlThree = htmlParser.parse(content)
-    const treeAst = htmlThreeFormatAst(htmlThree)
+function htmlBemValidator({ content }) {
+	const htmlThree = htmlParser.parse(content)
+	const treeAst = htmlThreeFormatAst(htmlThree)
 
-    const result = {
-        countBemWarning,
-        treeAst
-    }
-    resetInitialState()
+	const result = {
+		countBemWarning,
+		treeAst
+	}
+	resetInitialState()
 
-    return result
+	return result
 }
 
-function htmlBemValidatorResult({name, content}) {
-    const {countBemWarning, treeAst} = htmlBemValidator({name, content})
+function htmlBemValidatorResult({ name, content }) {
+	const { countBemWarning, treeAst } = htmlBemValidator({ name, content })
 
     if (countBemWarning) {
         console.log(CAT(treeAst))
@@ -213,6 +213,6 @@ function htmlBemValidatorResult({name, content}) {
 }
 
 module.exports = {
-    htmlBemValidator,
-    htmlBemValidatorResult
+	htmlBemValidator,
+	htmlBemValidatorResult
 }
