@@ -13,7 +13,6 @@
 		"classic-ancii-tree": "^1.0.1",
 		"node-html-parser": "^1.1.19",
 		"plugin-error": "^1.0.1",
-		"random-item": "^3.0.0",
 		"through2": "^3.0.1"
 	},
 	"devDependencies": {
