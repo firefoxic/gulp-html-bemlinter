@@ -1,19 +1,11 @@
 const htmlParser = require('node-html-parser')
 const CAT = require('classic-ancii-tree')
-const randomItem = require('random-item')
 const chalk = require('chalk')
 
-const COLORS = ['green', 'yellow', 'blue']
+const SUCCESS_COLOR = 'green'
+const ERROR_COLOR = 'red'
 
-let prevNameHtmlNode = ''
-let prevNameHtmlColor = 'white'
 let countBemWarning = 0
-
-function resetInitialState() {
-	prevNameHtmlNode = ''
-	prevNameHtmlColor = 'white'
-	countBemWarning = 0
-}
 
 function createNode({ label, color }) {
 	return {
@@ -31,27 +23,11 @@ function createLabelTree(element) {
 	return label
 }
 
-function generateRandomColor(name) {
-	if (prevNameHtmlNode !== name) {
-		const color = randomItem(COLORS)
-		if (color === prevNameHtmlColor) {
-			prevNameHtmlColor = color
-			return 'black'
-		}
-
-		prevNameHtmlColor = color
-		prevNameHtmlNode = name
-		return color
-	}
-
-	return prevNameHtmlColor
-}
-
 function htmlThreeFormatAst(htmlTree) {
 	let ast = {}
 	for (const element of htmlTree.childNodes) {
 		if (element.nodeType !== 1) continue
-		ast = createNode({ label: createLabelTree(element), color: generateRandomColor(element.tagName) })
+		ast = createNode({ label: createLabelTree(element), color: SUCCESS_COLOR })
 
 		element.parentElement = null
 
@@ -134,7 +110,7 @@ function formatTree({ htmlNodes, astNodes, parent }) {
 
 		const node = createNode({
 			label: createLabelTree(element),
-			color: element.customDataSet.hasError ? 'red' : generateRandomColor(element.tagName)
+			color: element.customDataSet.hasError ? ERROR_COLOR : SUCCESS_COLOR
 		})
 		astNodes.push(node)
 
@@ -196,7 +172,7 @@ function htmlBemlinter({ content }) {
 		countBemWarning,
 		treeAst
 	}
-	resetInitialState()
+	countBemWarning = 0
 
 	return result
 }
@@ -204,12 +180,12 @@ function htmlBemlinter({ content }) {
 function htmlBemlinterResult({ name, content }) {
 	const { countBemWarning, treeAst } = htmlBemlinter({ name, content })
 
-    if (countBemWarning) {
-        console.log(CAT(treeAst))
-        console.log(chalk.black.bgRed.bold(`❌ ${countBemWarning} - count bem warning. Filename:${name}`))
-    } else {
-        console.log(chalk.bgBlack.green(`✔ Gulp-html-bem-validator: Success. Filename:${name}`))
-    }
+	if (countBemWarning) {
+		console.log(CAT(treeAst))
+		console.log(chalk.white.bgRed.bold(`           BEM linting: ${countBemWarning} issue${countBemWarning > 1 ? 's' : ''} found in ${name}`))
+	} else {
+		console.log(chalk.bgBlack.green(`           BEM linting: No issues found in ${name}`))
+	}
 }
 
 module.exports = {
