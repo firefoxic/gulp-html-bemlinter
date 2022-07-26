@@ -55,6 +55,19 @@ function htmlThreeFormatAst(htmlTree) {
 
         element.parentElement = null
 
+		element.classNames.forEach(name => {
+			if (name.split('__').length === 1 && name.split('--').length === 1) {
+
+				if (!element.customDataSet) {
+					element.customDataSet = {
+						prefixes: {},
+						parentElement: null
+					}
+				}
+				element.customDataSet.prefixes[name] = name
+			}
+		})
+
         formatTree({
             htmlNodes: element.childNodes,
             astNodes: ast.nodes,
