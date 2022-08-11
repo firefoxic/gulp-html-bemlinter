@@ -1,6 +1,7 @@
 # gulp-html-bemlinter
 
-[![NPM version][npm-image]][npm-url] [![Build status][test-image]][test-url]
+[![Build status][test-image]][test-url]
+[![NPM version][npm-image]][npm-url]
 
 Gulp plugin for linting a bem html
 
