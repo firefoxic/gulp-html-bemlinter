@@ -1,6 +1,6 @@
 # gulp-html-bemlinter
 
-[![NPM version][npm-image]][npm-url] [![Build status][travis-image]][travis-url]
+[![NPM version][npm-image]][npm-url] [![Build status][test-image]][test-url]
 
 Gulp plugin for linting a bem html
 
@@ -36,7 +36,8 @@ function lintBemMarkup () {
 
 ![error-result-example](https://lh3.googleusercontent.com/aw2V-r8uRt25GeR3NqefAVqhomPef7z-j7zv5-vTeUphd4Rhfwo60J05qvMRMO5faHGVJOeGuWRFLOim0krO-dx2amtn7kHSXUMrdsxBIdyh9QZ0UPJ75XbKsxrz5ROckhl2dh3oAw=w1227-h375-no)
 
-[travis-url]: https://travis-ci.com/firefoxic/gulp-html-bemlinter
-[travis-image]: https://travis-ci.org/firefoxic/gulp-html-bemlinter.svg?branch=master
+[test-url]: https://github.com/firefoxic/gulp-html-bemlinter/actions
+[test-image]: https://github.com/firefoxic/gulp-html-bemlinter/actions/workflows/test.yml/badge.svg?branch=main
+
 [npm-url]: https://npmjs.org/package/gulp-html-bemlinter
 [npm-image]: https://badge.fury.io/js/gulp-html-bemlinter.svg
