@@ -2,6 +2,7 @@
 
 [![Build status][test-image]][test-url]
 [![NPM version][npm-image]][npm-url]
+[![Vulnerabilities][vulnerabilities-image]][vulnerabilities-url]
 
 Gulp plugin for linting a bem html
 
@@ -42,3 +43,6 @@ function lintBemMarkup () {
 
 [npm-url]: https://npmjs.org/package/gulp-html-bemlinter
 [npm-image]: https://badge.fury.io/js/gulp-html-bemlinter.svg
+
+[vulnerabilities-url]: https://snyk.io/test/github/firefoxic/gulp-html-bemlinter
+[vulnerabilities-image]: https://snyk.io/test/github/firefoxic/gulp-html-bemlinter/badge.svg
