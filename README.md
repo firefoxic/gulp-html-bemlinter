@@ -1,6 +1,7 @@
 # gulp-html-bemlinter
 
 [![Build status][test-image]][test-url]
+[![License:ISC][license-image]][license-url]
 [![NPM version][npm-image]][npm-url]
 [![Vulnerabilities][vulnerabilities-image]][vulnerabilities-url]
 
@@ -43,6 +44,9 @@ function lintBemMarkup () {
 
 [npm-url]: https://npmjs.org/package/gulp-html-bemlinter
 [npm-image]: https://badge.fury.io/js/gulp-html-bemlinter.svg
+
+[license-url]: https://github.com/firefoxic/gulp-html-bemlinter/blob/main/LICENSE
+[license-image]: https://img.shields.io/badge/License-ISC-green.svg
 
 [vulnerabilities-url]: https://snyk.io/test/github/firefoxic/gulp-html-bemlinter
 [vulnerabilities-image]: https://snyk.io/test/github/firefoxic/gulp-html-bemlinter/badge.svg
