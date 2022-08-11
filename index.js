@@ -1,11 +1,11 @@
-const path = require('path')
-const PluginError = require('plugin-error')
-const through = require('through2')
-const htmlBemlinter = require('./src/index')
+import path from 'path'
+import PluginError from 'plugin-error'
+import through from 'through2'
+import { htmlBemlinterResult } from './src/index.js'
 
 const PLUGIN_NAME = 'gulp-html-bemlinter'
 
-module.exports = function () {
+export default function () {
     return through.obj(function (file, encoding, callback) {
         if (file.isNull()) return callback(null, file)
 
@@ -14,7 +14,7 @@ module.exports = function () {
             return callback(null)
         }
 
-        htmlBemlinter.htmlBemlinterResult({
+        htmlBemlinterResult({
             name: path.basename(file.path),
             content: String(file.contents)
         })

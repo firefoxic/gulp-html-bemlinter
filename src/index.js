@@ -1,6 +1,6 @@
-const htmlParser = require('node-html-parser')
-const CAT = require('classic-ancii-tree')
-const chalk = require('chalk')
+import htmlParser from 'node-html-parser'
+import CAT from 'classic-ancii-tree'
+import chalk from 'chalk'
 
 const SUCCESS_COLOR = 'green'
 const ERROR_COLOR = 'red'
@@ -18,7 +18,7 @@ function createNode({ label, color }) {
 function createLabelTree(element) {
 	let label = element.tagName
 	if (element.id) label += `#${element.id.split(' ').join('#')}`
-	if (element.classNames.length) label += `.${element.classNames.join('.')}`
+	if (element.classList.length) label += `.${element.classList.value.join('.')}`
 
 	return label
 }
@@ -31,7 +31,7 @@ function htmlThreeFormatAst(htmlTree) {
 
 		element.parentElement = null
 
-		element.classNames.forEach(name => {
+		element.classList.value.forEach(name => {
 			if (name.split('__').length === 1 && name.split('--').length === 1) {
 
 				if (!element.customDataSet) {
@@ -80,7 +80,7 @@ function copyParentPrefixes({ element, parent }) {
 function addClassesAsPrefixes({ element, parent }) {
 	copyParentPrefixes({ element, parent })
 
-	element.classNames.forEach(name => {
+	element.classList.value.forEach(name => {
 		if (name.split('__').length === 1 && name.split('--').length === 1) {
 			element.customDataSet.prefixes[name] = name
 		}
@@ -122,12 +122,12 @@ function formatTree({ htmlNodes, astNodes, parent }) {
 }
 
 function checkBemElement(element) {
-	if (element.classNames.join().indexOf('__') < 0 &&
-		element.classNames.join().indexOf('--') < 0) {
+	if (element.classList.value.join().indexOf('__') < 0 &&
+		element.classList.value.join().indexOf('--') < 0) {
 		return false
 	}
 
-	element.classNames.forEach(classItem => {
+	element.classList.value.forEach(classItem => {
 		let prefixCorrect = false
 		if (classItem.split('__').length > 2) {
 			countBemWarning++
@@ -153,7 +153,7 @@ function checkBemElement(element) {
 			let modifierPrefixCorrect = false
 			const modifierPrefix = classItem.split('--')[0]
 
-			if (~element.classNames.indexOf(modifierPrefix)) modifierPrefixCorrect = true
+			if (~element.classList.value.indexOf(modifierPrefix)) modifierPrefixCorrect = true
 
 			if (!modifierPrefixCorrect) {
 				countBemWarning++
@@ -164,7 +164,7 @@ function checkBemElement(element) {
 	})
 }
 
-function htmlBemlinter({ content }) {
+export function htmlBemlinter({ content }) {
 	const htmlThree = htmlParser.parse(content)
 	const treeAst = htmlThreeFormatAst(htmlThree)
 
@@ -177,7 +177,7 @@ function htmlBemlinter({ content }) {
 	return result
 }
 
-function htmlBemlinterResult({ name, content }) {
+export function htmlBemlinterResult({ name, content }) {
 	const { countBemWarning, treeAst } = htmlBemlinter({ name, content })
 
 	if (countBemWarning) {
@@ -186,9 +186,4 @@ function htmlBemlinterResult({ name, content }) {
 	} else {
 		console.log(chalk.bgBlack.green(`           BEM linting: No issues found in ${name}`))
 	}
-}
-
-module.exports = {
-	htmlBemlinter,
-	htmlBemlinterResult
 }
