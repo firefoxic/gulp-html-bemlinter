@@ -192,8 +192,8 @@ export function htmlBemlinterResult ({ name, content }) {
 
 	if (warningCount) {
 		console.log(CAT(treeAst))
-		console.log(chalk.white.bgRed.bold(`           BEM linting: ${warningCount} issue${warningCount > 1 ? "s" : ""} found in ${name}`))
+		console.log(chalk.red.bold(`BEM linting: ${warningCount} issue${warningCount > 1 ? "s" : ""} found in ${name}`))
 	} else {
-		console.log(chalk.bgBlack.green(`           BEM linting: No issues found in ${name}`))
+		console.log(chalk.green(`BEM linting: No issues found in ${name}`))
 	}
 }
