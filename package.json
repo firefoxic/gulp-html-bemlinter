@@ -5,6 +5,7 @@
 	"description": "Gulp plugin for linting a bem html",
 	"main": "index.js",
 	"scripts": {
+		"lint": "eslint ./",
 		"test": "mocha"
 	},
 	"author": "firefoxic",
@@ -17,6 +18,7 @@
 		"through2": "4.0.x"
 	},
 	"devDependencies": {
+		"eslint": "^8.21.0",
 		"mocha": "10.0.x"
 	},
 	"repository": {
