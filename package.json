@@ -17,6 +17,7 @@
 		"through2": "4.0.x"
 	},
 	"devDependencies": {
+		"eslint": "^8.21.0",
 		"mocha": "10.0.x"
 	},
 	"repository": {
