@@ -29,15 +29,9 @@ function lintBemMarkup () {
 }
 ```
 
-## An example of outputting results to a console
+## Examples of failed and successful linting output
 
-### Success
-
-![success-result-example](https://lh3.googleusercontent.com/CI__G-pJAk9uyxFKABAVeePzTYCmBOgDkRGwgnE1xqd0dZNjraxTy0BKpDJ4iI4vLUCsugXCnWTWFqKtXT_irGa-ZGlSdX_yMyRzvwx7Fb4IWPeRvBamuOq-LuLjvA8ZVLNsHvE45Q=w1157-h32-no)
-
-### Error
-
-![error-result-example](https://lh3.googleusercontent.com/aw2V-r8uRt25GeR3NqefAVqhomPef7z-j7zv5-vTeUphd4Rhfwo60J05qvMRMO5faHGVJOeGuWRFLOim0krO-dx2amtn7kHSXUMrdsxBIdyh9QZ0UPJ75XbKsxrz5ROckhl2dh3oAw=w1227-h375-no)
+![image](https://user-images.githubusercontent.com/3382798/184424150-2cedb63f-c77e-4a30-a958-6f9e245e346e.png)
 
 [test-url]: https://github.com/firefoxic/gulp-html-bemlinter/actions
 [test-image]: https://github.com/firefoxic/gulp-html-bemlinter/actions/workflows/test.yml/badge.svg?branch=main
