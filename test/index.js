@@ -9,58 +9,52 @@ let __filename = fileURLToPath(import.meta.url)
 let __dirname = dirname(__filename)
 
 describe("gulp-html-bemlinter", () => {
-	describe("should work in buffer mode", () => {
-		it("should not be errors because a valid bem html is passed", () => {
+	describe("Should work in buffer mode.", () => {
+		it("Should be no errors with correct bem html.", () => {
 			let html = fs.readFileSync(join(__dirname, "/fixtures/valid.html"))
 			let { warningCount } = htmlBemlinter({ content: html.toString() })
 
 			assert.equal(warningCount, 0)
 		})
 
-		it("should be one error bem", () => {
-			let html = fs.readFileSync(join(__dirname, "/fixtures/no-valid-error-1.html"))
+		it("Should be one error in bem: element not inside its block.", () => {
+			let html = fs.readFileSync(join(__dirname, "/fixtures/error-in-element-without-block.html"))
 			let { warningCount } = htmlBemlinter({ content: html.toString() })
 
 			assert.strictEqual(warningCount, 1)
 		})
 
-		it("should be one error bem(prefix)", () => {
-			let html = fs.readFileSync(join(__dirname, "/fixtures/prefix-error.html"))
+		it("Should be two errors in bem: modifiers without modifiable entity.", () => {
+			let html = fs.readFileSync(join(__dirname, "/fixtures/error-in-modifiers.html"))
+			let { warningCount } = htmlBemlinter({ content: html.toString() })
+
+			assert.strictEqual(warningCount, 2)
+		})
+
+		it("Should be one error in bem: element of element.", () => {
+			let html = fs.readFileSync(join(__dirname, "/fixtures/error-in-element-of-element.html"))
 			let { warningCount } = htmlBemlinter({ content: html.toString() })
 
 			assert.strictEqual(warningCount, 1)
 		})
 
-		it("should be one error element-within-an-element", () => {
-			let html = fs.readFileSync(join(__dirname, "/fixtures/element-within-an-element.html"))
+		it("Should be one error in bem: invalid html should be ignored.", () => {
+			let html = fs.readFileSync(join(__dirname, "/fixtures/error-in-markup.html"))
 			let { warningCount } = htmlBemlinter({ content: html.toString() })
 
 			assert.strictEqual(warningCount, 1)
 		})
 
-		it("should not be errors because a valid bem html is passed", () => {
-			let html = fs.readFileSync(join(__dirname, "/fixtures/page__elements.html"))
-			let { warningCount } = htmlBemlinter({ content: html.toString() })
+		it("Error output example.", () => {
+			let html = fs.readFileSync(join(__dirname, "/fixtures/error-in-element-of-element.html"))
 
-			assert.strictEqual(warningCount, 0)
+			htmlBemlinterResult({ name: "error-in-element-of-element.html", content: html.toString() })
 		})
 
-		it("output the success result to the console", () => {
+		it("Successful output example.", () => {
 			let html = fs.readFileSync(join(__dirname, "/fixtures/valid.html"))
 
 			htmlBemlinterResult({ name: "valid.html", content: html.toString() })
-		})
-
-		it("output the error result to the console", () => {
-			let html = fs.readFileSync(join(__dirname, "/fixtures/no-valid-error-1.html"))
-
-			htmlBemlinterResult({ name: "no-valid-error-1.html", content: html.toString() })
-		})
-
-		it("output the error result to the console", () => {
-			let html = fs.readFileSync(join(__dirname, "/fixtures/element-within-an-element.html"))
-
-			htmlBemlinterResult({ name: "element-within-an-element.html", content: html.toString() })
 		})
 	})
 })
