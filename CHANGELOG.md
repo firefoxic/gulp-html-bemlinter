@@ -6,6 +6,21 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
   
+## [2.0.0] — 2022–08–12
+
+### Added
+
+- Eslint.
+
+### Changed
+
+- All project dependencies have been updated to the latest versions.
+- To upgrade Chalk to v5+, the project was transferred from cjs to esm.
+
+### Fixed
+
+- JS files fixed to match eslint settings.
+  
 ## [1.2.3] — 2022–07–27
 
 ### Added
