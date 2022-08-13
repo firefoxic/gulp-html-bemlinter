@@ -1,5 +1,5 @@
 import htmlParser from "node-html-parser"
-import CAT from "classic-ancii-tree"
+import { generateAnciiTree } from "./generateAnciiTree.js"
 import chalk from "chalk"
 
 const SUCCESS_COLOR = "green"
@@ -191,7 +191,7 @@ export function htmlBemlinterResult ({ name, content }) {
 	let { warningCount, treeAst } = htmlBemlinter({ name, content })
 
 	if (warningCount) {
-		console.log(CAT(treeAst))
+		console.log(generateAnciiTree(treeAst))
 		console.log(chalk.red.bold(`BEM linting: ${warningCount} issue${warningCount > 1 ? "s" : ""} found in ${name}`))
 	} else {
 		console.log(chalk.green(`BEM linting: No issues found in ${name}`))
