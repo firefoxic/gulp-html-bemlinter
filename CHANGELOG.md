@@ -6,6 +6,15 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+## [2.0.2] — 2022–08–13
+
+### Changed
+
+- Result styling.
+- Messages of the tests.
+- Examples screenshot in [README.md](README.md)
+
+
 ## [2.0.1] — 2022–08–13
 
 ### Added
