@@ -5,7 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
-  
+
+## [2.0.1] — 2022–08–13
+
+### Added
+
+- GitHub action for linting and testing project during pull requests.
+- Badge for tests.
+- Badge for license.
+- Badge for vulnerability counter.
+
 ## [2.0.0] — 2022–08–12
 
 ### Added
@@ -20,7 +29,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ### Fixed
 
 - JS files fixed to match eslint settings.
-  
+
 ## [1.2.3] — 2022–07–27
 
 ### Added

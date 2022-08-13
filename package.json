@@ -1,7 +1,7 @@
 {
 	"name": "gulp-html-bemlinter",
 	"type": "module",
-	"version": "2.0.0",
+	"version": "2.0.1",
 	"description": "Gulp plugin for linting a bem html",
 	"main": "index.js",
 	"scripts": {
