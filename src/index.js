@@ -193,6 +193,7 @@ export function htmlBemlinterResult ({ name, content }) {
 	if (warningCount) {
 		console.log(generateAnciiTree(treeAst))
 		console.log(chalk.red.bold(`BEM linting: ${warningCount} issue${warningCount > 1 ? "s" : ""} found in ${name}`))
+		process.exitCode = 1
 	} else {
 		console.log(chalk.green(`BEM linting: No issues found in ${name}`))
 	}
