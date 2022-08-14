@@ -6,7 +6,9 @@
 	"main": "index.js",
 	"scripts": {
 		"lint": "eslint ./",
-		"test": "mocha"
+		"test": "mocha",
+		"preversion": "npm t && npm run lint",
+		"postversion": "npm publish"
 	},
 	"author": "firefoxic",
 	"license": "ISC",
