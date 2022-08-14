@@ -6,7 +6,17 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
-## [2.0.3] — 2022–08–13
+## [2.1.0] — 2022–08–14
+
+### Changed
+
+- If you have a precommit configured, now it will also be triggered on errors according to the BEM methodology.
+
+### Fixed
+
+- The license badge color stands out less from the list of other badges.
+
+## [2.0.3] — 2022–08–14
 
 ### Added
 
@@ -87,7 +97,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 - Basic functionality via a fork of the [gulp-html-bem-validator](https://github.com/dDenysS/gulp-html-bem-validator/) project.
 
-[unreleased]: https://github.com/firefoxic/gulp-html-bemlinter/compare/v2.0.3...HEAD
+[unreleased]: https://github.com/firefoxic/gulp-html-bemlinter/compare/v2.1.0...HEAD
+[2.1.0]: https://github.com/firefoxic/gulp-html-bemlinter/compare/v2.0.3...v2.1.0
 [2.0.3]: https://github.com/firefoxic/gulp-html-bemlinter/compare/v2.0.2...v2.0.3
 [2.0.2]: https://github.com/firefoxic/gulp-html-bemlinter/compare/v2.0.1...v2.0.2
 [2.0.1]: https://github.com/firefoxic/gulp-html-bemlinter/compare/v2.0.0...v2.0.1
