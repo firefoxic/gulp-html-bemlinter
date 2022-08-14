@@ -72,3 +72,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ### Added
 
 - Basic functionality via a fork of the [gulp-html-bem-validator](https://github.com/dDenysS/gulp-html-bem-validator/) project.
+
+[unreleased]: https://github.com/firefoxic/gulp-html-bemlinter/compare/v2.0.2...HEAD
+[2.0.2]: https://github.com/firefoxic/gulp-html-bemlinter/compare/v2.0.1...v2.0.2
+[2.0.1]: https://github.com/firefoxic/gulp-html-bemlinter/compare/v2.0.0...v2.0.1
+[2.0.0]: https://github.com/firefoxic/gulp-html-bemlinter/compare/v1.2.3...v2.0.0
+[1.2.3]: https://github.com/firefoxic/gulp-html-bemlinter/compare/v1.2.0...v1.2.3
+[1.2.0]: https://github.com/firefoxic/gulp-html-bemlinter/compare/v1.1.0...v1.2.0
+[1.1.0]: https://github.com/firefoxic/gulp-html-bemlinter/compare/v1.0.0...v1.1.0
+[1.0.1]: https://github.com/firefoxic/gulp-html-bemlinter/releases/tag/v1.0.0
