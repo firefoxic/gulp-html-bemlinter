@@ -8,7 +8,8 @@
 		"lint": "eslint ./",
 		"test": "mocha",
 		"preversion": "npm t && npm run lint",
-		"postversion": "npm publish"
+		"postversion": "npm publish",
+		"postpublish": "git push origin --all; git push origin --tags"
 	},
 	"author": "firefoxic",
 	"license": "ISC",
