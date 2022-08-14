@@ -40,7 +40,7 @@ function lintBemMarkup () {
 [npm-image]: https://badge.fury.io/js/gulp-html-bemlinter.svg
 
 [license-url]: https://github.com/firefoxic/gulp-html-bemlinter/blob/main/LICENSE
-[license-image]: https://img.shields.io/badge/License-ISC-green.svg
+[license-image]: https://img.shields.io/badge/License-ISC-limegreen.svg
 
 [vulnerabilities-url]: https://snyk.io/test/github/firefoxic/gulp-html-bemlinter
 [vulnerabilities-image]: https://snyk.io/test/github/firefoxic/gulp-html-bemlinter/badge.svg
