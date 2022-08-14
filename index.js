@@ -6,7 +6,7 @@ import { htmlBemlinterResult } from "./src/index.js"
 const PLUGIN_NAME = "gulp-html-bemlinter"
 
 export default function () {
-	return through.obj(function (file, callback) {
+	return through.obj(function (file, encoding, callback) {
 		if (file.isNull()) {
 			return callback(null, file)
 		}
