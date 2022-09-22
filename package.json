@@ -16,12 +16,12 @@
 	"license": "ISC",
 	"dependencies": {
 		"chalk": "5.0.x",
-		"node-html-parser": "5.4.x",
+		"node-html-parser": "6.1.x",
 		"plugin-error": "2.0.x",
 		"through2": "4.0.x"
 	},
 	"devDependencies": {
-		"eslint": "^8.22.0",
+		"eslint": "8.23.x",
 		"mocha": "10.0.x"
 	},
 	"repository": {
