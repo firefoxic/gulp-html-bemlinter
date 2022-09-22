@@ -32,7 +32,7 @@
 		"url": "https://github.com/firefoxic/gulp-html-bemlinter/issues"
 	},
 	"keywords": [
-		"gulp",
+		"gulpplugin",
 		"html",
 		"bem",
 		"linter"
