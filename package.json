@@ -16,7 +16,7 @@
 	"license": "ISC",
 	"dependencies": {
 		"chalk": "5.0.x",
-		"node-html-parser": "6.1.x",
+		"node-html-parser": "6.1.1",
 		"plugin-error": "2.0.x",
 		"through2": "4.0.x"
 	},
