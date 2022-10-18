@@ -15,14 +15,14 @@
 	"author": "firefoxic",
 	"license": "ISC",
 	"dependencies": {
-		"chalk": "5.0.x",
-		"node-html-parser": "6.1.x",
-		"plugin-error": "2.0.x",
-		"through2": "4.0.x"
+		"chalk": "^5.1.2",
+		"node-html-parser": "^6.1.1",
+		"plugin-error": "^2.0.0",
+		"through2": "^4.0.2"
 	},
 	"devDependencies": {
-		"eslint": "8.23.x",
-		"mocha": "10.0.x"
+		"eslint": "^8.25.0",
+		"mocha": "^10.1.0"
 	},
 	"repository": {
 		"type": "git",
