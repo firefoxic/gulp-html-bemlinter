@@ -31,6 +31,12 @@ function lintBemMarkup () {
 
 ## Examples of failed and successful linting output
 
+## Useful links
+
+- [Changelog](CHANGELOG.md)
+- [License](LICENSE)
+- [BEM Documentaion](https://en.bem.info/methodology)
+
 ![image](https://user-images.githubusercontent.com/3382798/184424150-2cedb63f-c77e-4a30-a958-6f9e245e346e.png)
 
 [test-url]: https://github.com/firefoxic/gulp-html-bemlinter/actions
