@@ -6,11 +6,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+## [v2.1.3] — 2023–03–20
+
 ### Updated
 
 - File lists to ignore.
+- Dependencies.
 
-## [2.1.2] — 2022–09–22
+## [v2.1.2] — 2022–09–22
 
 ### Updated
 
@@ -20,13 +23,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 - Replaced gulp keyword with gulpplugin.
 
-## [2.1.1] — 2022–08–14
+## [v2.1.1] — 2022–08–14
 
 ### Fixed
 
 - A bug that was present since v2.0.0 and dropped all BEM linting.
 
-## [2.1.0] — 2022–08–14
+## [v2.1.0] — 2022–08–14
 
 ### Changed
 
@@ -36,7 +39,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 - The license badge color stands out less from the list of other badges.
 
-## [2.0.3] — 2022–08–14
+## [v2.0.3] — 2022–08–14
 
 ### Added
 
@@ -50,7 +53,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 - The versions in this changelog are now links to comparisons with previous versions.
 
-## [2.0.2] — 2022–08–13
+## [v2.0.2] — 2022–08–13
 
 ### Changed
 
@@ -58,8 +61,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Messages of the tests.
 - Examples screenshot in [README.md](README.md)
 
-
-## [2.0.1] — 2022–08–13
+## [v2.0.1] — 2022–08–13
 
 ### Added
 
@@ -68,7 +70,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Badge for license.
 - Badge for vulnerability counter.
 
-## [2.0.0] — 2022–08–12
+## [v2.0.0] — 2022–08–12
 
 ### Added
 
@@ -83,7 +85,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 - JS files fixed to match eslint settings.
 
-## [1.2.3] — 2022–07–27
+## [v1.2.3] — 2022–07–27
 
 ### Added
 
@@ -99,32 +101,34 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 - One optional dependency.
 
-## [1.2.0] — 2022–07–26
+## [v1.2.0] — 2022–07–26
 
 ### Fixed
 
 - `page` block elements on the `html` tag are no longer treated as “element outside of its block” errors.
 
-## [1.1.0] — 2022–07–26
+## [v1.1.0] — 2022–07–26
 
 ### Fixed
 
 - The elements of the elements, such as `block__elem1__elem2`, are now also flagged as a bem naming error (thanks to [@SampetovaN](https://github.com/SampetovaN)).
 
-## [1.0.0] — 2022–07–26
+## [v1.0.0] — 2022–07–26
 
 ### Added
 
 - Basic functionality via a fork of the [gulp-html-bem-validator](https://github.com/dDenysS/gulp-html-bem-validator/) project.
 
-[unreleased]: https://github.com/firefoxic/gulp-html-bemlinter/compare/v2.1.1...HEAD
-[2.1.1]: https://github.com/firefoxic/gulp-html-bemlinter/compare/v2.1.0...v2.1.1
-[2.1.0]: https://github.com/firefoxic/gulp-html-bemlinter/compare/v2.0.3...v2.1.0
-[2.0.3]: https://github.com/firefoxic/gulp-html-bemlinter/compare/v2.0.2...v2.0.3
-[2.0.2]: https://github.com/firefoxic/gulp-html-bemlinter/compare/v2.0.1...v2.0.2
-[2.0.1]: https://github.com/firefoxic/gulp-html-bemlinter/compare/v2.0.0...v2.0.1
-[2.0.0]: https://github.com/firefoxic/gulp-html-bemlinter/compare/v1.2.3...v2.0.0
-[1.2.3]: https://github.com/firefoxic/gulp-html-bemlinter/compare/v1.2.0...v1.2.3
-[1.2.0]: https://github.com/firefoxic/gulp-html-bemlinter/compare/v1.1.0...v1.2.0
-[1.1.0]: https://github.com/firefoxic/gulp-html-bemlinter/compare/v1.0.0...v1.1.0
-[1.0.1]: https://github.com/firefoxic/gulp-html-bemlinter/releases/tag/v1.0.0
+[unreleased]: https://github.com/firefoxic/gulp-html-bemlinter/compare/v2.1.3...HEAD
+[v2.1.3]: https://github.com/firefoxic/gulp-html-bemlinter/compare/v2.1.2...v2.1.3
+[v2.1.2]: https://github.com/firefoxic/gulp-html-bemlinter/compare/v2.1.1...v2.1.2
+[v2.1.1]: https://github.com/firefoxic/gulp-html-bemlinter/compare/v2.1.0...v2.1.1
+[v2.1.0]: https://github.com/firefoxic/gulp-html-bemlinter/compare/v2.0.3...v2.1.0
+[v2.0.3]: https://github.com/firefoxic/gulp-html-bemlinter/compare/v2.0.2...v2.0.3
+[v2.0.2]: https://github.com/firefoxic/gulp-html-bemlinter/compare/v2.0.1...v2.0.2
+[v2.0.1]: https://github.com/firefoxic/gulp-html-bemlinter/compare/v2.0.0...v2.0.1
+[v2.0.0]: https://github.com/firefoxic/gulp-html-bemlinter/compare/v1.2.3...v2.0.0
+[v1.2.3]: https://github.com/firefoxic/gulp-html-bemlinter/compare/v1.2.0...v1.2.3
+[v1.2.0]: https://github.com/firefoxic/gulp-html-bemlinter/compare/v1.1.0...v1.2.0
+[v1.1.0]: https://github.com/firefoxic/gulp-html-bemlinter/compare/v1.0.0...v1.1.0
+[v1.0.0]: https://github.com/firefoxic/gulp-html-bemlinter/releases/tag/v1.0.0
