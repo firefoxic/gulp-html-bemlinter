@@ -1,12 +1,8 @@
-.idea
-node_modules/
-
 .DS_Store
 .vscode
-*.ai
-*.log
-*.pdf
-*.psd
+.idea
 *.sublime*
+*.log
+node_modules
 npm-debug.*
 Thumbs.db
