@@ -6,6 +6,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+### Changed
+
+- The `npm` lock file has been replaced by the `pnpm` lock file.
+	For this replacement I had to rewrite the tests action, for which I had to pin the version of the node via volta.
+
 ## [v2.1.3] — 2023–03–20
 
 ### Updated
