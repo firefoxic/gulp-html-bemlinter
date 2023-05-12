@@ -6,8 +6,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+## [v2.1.4] — 2023–05–12
+
 ### Changed
 
+- The output in the terminal is no longer clogged with success messages.
 - The `npm` lock file has been replaced by the `pnpm` lock file.
 	For this replacement I had to rewrite the tests action, for which I had to pin the version of the node via volta.
 
@@ -128,7 +131,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 - Basic functionality via a fork of the [gulp-html-bem-validator](https://github.com/dDenysS/gulp-html-bem-validator/) project.
 
-[unreleased]: https://github.com/firefoxic/gulp-html-bemlinter/compare/v2.1.3...HEAD
+[unreleased]: https://github.com/firefoxic/gulp-html-bemlinter/compare/v2.1.4...HEAD
+[v2.1.4]: https://github.com/firefoxic/gulp-html-bemlinter/compare/v2.1.3...v2.1.4
 [v2.1.3]: https://github.com/firefoxic/gulp-html-bemlinter/compare/v2.1.2...v2.1.3
 [v2.1.2]: https://github.com/firefoxic/gulp-html-bemlinter/compare/v2.1.1...v2.1.2
 [v2.1.1]: https://github.com/firefoxic/gulp-html-bemlinter/compare/v2.1.0...v2.1.1
