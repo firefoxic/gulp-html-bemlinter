@@ -1,9 +1,34 @@
 {
 	"name": "gulp-html-bemlinter",
+	"description": "Gulp plugin for linting a bem html",
 	"type": "module",
 	"version": "2.1.4",
-	"description": "Gulp plugin for linting a bem html",
 	"exports": "./index.js",
+	"engines": {
+		"node": "^18.12 || ^20.9"
+	},
+	"dependencies": {
+		"chalk": "^5.3.0",
+		"node-html-parser": "^6.1.11",
+		"plugin-error": "^2.0.1",
+		"through2": "^4.0.2"
+	},
+	"license": "ISC",
+	"author": "firefoxic",
+	"homepage": "https://github.com/firefoxic/gulp-html-bemlinter",
+	"bugs": {
+		"url": "https://github.com/firefoxic/gulp-html-bemlinter/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git@github.com:firefoxic/gulp-html-bemlinter.git"
+	},
+	"keywords": [
+		"gulpplugin",
+		"html",
+		"bem",
+		"linter"
+	],
 	"scripts": {
 		"lint": "eslint . --ignore-path .gitignore",
 		"test": "node --test",
@@ -12,31 +37,7 @@
 		"postversion": "pnpm publish",
 		"postpublish": "git push origin --all && git push origin --tags"
 	},
-	"author": "firefoxic",
-	"license": "ISC",
-	"dependencies": {
-		"chalk": "^5.3.0",
-		"node-html-parser": "^6.1.11",
-		"plugin-error": "^2.0.1",
-		"through2": "^4.0.2"
-	},
 	"devDependencies": {
 		"eslint": "^8.54.0"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git@github.com:firefoxic/gulp-html-bemlinter.git"
-	},
-	"bugs": {
-		"url": "https://github.com/firefoxic/gulp-html-bemlinter/issues"
-	},
-	"keywords": [
-		"gulpplugin",
-		"html",
-		"bem",
-		"linter"
-	],
-	"engines": {
-		"node": "^18.12 || ^20.9"
 	}
 }
