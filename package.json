@@ -4,6 +4,9 @@
 	"type": "module",
 	"version": "2.1.4",
 	"exports": "./lib/index.js",
+	"files": [
+		"./lib/**/*.js"
+	],
 	"engines": {
 		"node": "^18.12 || ^20.9"
 	},

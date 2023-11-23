@@ -1,8 +1,0 @@
-.github
-.vscode
-.idea
-.editorconfig
-.eslintrc
-*.sublime*
-test
-Thumbs.db
