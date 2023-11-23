@@ -30,7 +30,9 @@
 		"linter"
 	],
 	"scripts": {
-		"lint": "eslint . --ignore-path .gitignore",
+		"lint:ec": "ec",
+		"lint:es": "eslint . --ignore-path .gitignore",
+		"lint": "pnpm /^lint:/",
 		"test": "node --test",
 		"pretest": "pnpm lint",
 		"preversion": "pnpm test",
@@ -38,6 +40,7 @@
 		"postpublish": "git push origin --all && git push origin --tags"
 	},
 	"devDependencies": {
+		"editorconfig-checker": "^5.1.2",
 		"eslint": "^8.54.0"
 	}
 }
