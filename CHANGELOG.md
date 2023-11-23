@@ -7,6 +7,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.
 
 ## [Unreleased]
 
+### Changed
+
+- Mixing an element to its own block is now considered an error.
+
 ## [2.1.4] — 2023–05–12
 
 ### Fixed
