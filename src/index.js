@@ -1,6 +1,9 @@
-import htmlParser from "node-html-parser"
-import { generateAnciiTree } from "./generateAnciiTree.js"
+import process from "node:process"
+
 import chalk from "chalk"
+import htmlParser from "node-html-parser"
+
+import { generateAnciiTree } from "./generateAnciiTree.js"
 
 const SUCCESS_COLOR = "green"
 const ERROR_COLOR = "red"

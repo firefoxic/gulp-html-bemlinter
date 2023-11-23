@@ -1,6 +1,8 @@
-import path from "path"
-import PluginError from "plugin-error"
+import { basename } from "node:path"
+
 import through from "through2"
+import PluginError from "plugin-error"
+
 import { htmlBemlinterResult } from "./src/index.js"
 
 const PLUGIN_NAME = "gulp-html-bemlinter"
@@ -17,7 +19,7 @@ export default function () {
 		}
 
 		htmlBemlinterResult({
-			name: path.basename(file.path),
+			name: basename(file.path),
 			content: String(file.contents)
 		})
 

@@ -3,7 +3,7 @@
 	"type": "module",
 	"version": "2.1.4",
 	"description": "Gulp plugin for linting a bem html",
-	"main": "index.js",
+	"exports": "./index.js",
 	"scripts": {
 		"lint": "eslint ./",
 		"test": "mocha",
