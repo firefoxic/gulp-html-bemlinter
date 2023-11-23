@@ -6,34 +6,31 @@ on:
       - main
   pull_request:
     branches:
-      - main
+      - '*'
 
 jobs:
-  npm-test:
+  test:
     runs-on: ubuntu-latest
 
     steps:
 
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Setup Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version-file: 'package.json'
 
       - name: Restore cache
         uses: actions/cache@v3
         with:
-          path: /home/runner/.local/share/pnpm/store/v3
+          path: ~/.local/share/pnpm/store/v3
           key: cache-pnpm-${{ hashFiles('./pnpn-lock.yaml') }}
           restore-keys: cache-pnpm-
 
-      - name: Install pnpm
-        run: corepack enable; corepack prepare pnpm@latest --activate
-
       - name: Install dependencies
-        run: pnpm i --ignore-scripts
+        run:  corepack enable && pnpm i
 
       - name: Run test
-        run: npm t
+        run: pnpm test
