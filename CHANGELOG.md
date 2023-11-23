@@ -7,6 +7,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.
 
 ## [Unreleased]
 
+## [3.0.0] — 2023–11–23
+
 ### Changed
 
 - Mixing an element to its own block is now considered an error.
