@@ -3,7 +3,7 @@ import { readFileSync } from "node:fs"
 import process from "node:process"
 import { describe, it } from "node:test"
 
-import { htmlBemlinter, htmlBemlinterResult } from "../src/index.js"
+import { htmlBemlinter, htmlBemlinterResult } from "../lib/htmlBemLinters.js"
 
 
 describe("gulp-html-bemlinter", () => {

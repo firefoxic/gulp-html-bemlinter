@@ -3,7 +3,7 @@
 	"description": "Gulp plugin for linting a bem html",
 	"type": "module",
 	"version": "2.1.4",
-	"exports": "./index.js",
+	"exports": "./lib/index.js",
 	"engines": {
 		"node": "^18.12 || ^20.9"
 	},
