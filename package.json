@@ -5,23 +5,23 @@
 	"description": "Gulp plugin for linting a bem html",
 	"exports": "./index.js",
 	"scripts": {
-		"lint": "eslint ./",
+		"lint": "eslint . --ignore-path .gitignore",
 		"test": "node --test",
-		"pretest": "npm run lint",
-		"preversion": "npm test",
-		"postversion": "npm publish",
-		"postpublish": "git push origin --all; git push origin --tags"
+		"pretest": "pnpm lint",
+		"preversion": "pnpm test",
+		"postversion": "pnpm publish",
+		"postpublish": "git push origin --all && git push origin --tags"
 	},
 	"author": "firefoxic",
 	"license": "ISC",
 	"dependencies": {
-		"chalk": "^5.2.0",
-		"node-html-parser": "^6.1.5",
+		"chalk": "^5.3.0",
+		"node-html-parser": "^6.1.11",
 		"plugin-error": "^2.0.1",
 		"through2": "^4.0.2"
 	},
 	"devDependencies": {
-		"eslint": "^8.40.0"
+		"eslint": "^8.54.0"
 	},
 	"repository": {
 		"type": "git",
@@ -36,7 +36,7 @@
 		"bem",
 		"linter"
 	],
-	"volta": {
-		"node": "18.16.0"
+	"engines": {
+		"node": "^18.12 || ^20.9"
 	}
 }
