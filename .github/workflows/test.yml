@@ -34,3 +34,5 @@ jobs:
 
       - name: Run test
         run: pnpm test
+        env:
+          FORCE_COLOR: true
