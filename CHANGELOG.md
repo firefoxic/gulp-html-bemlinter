@@ -9,7 +9,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.
 
 ### Fixed
 
-- The coloring terminal output.
+- The coloring terminal output.
+- The informative of the error output.
 
 ## [3.0.0] — 2023–11–23
 
