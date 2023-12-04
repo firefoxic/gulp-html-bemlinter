@@ -7,6 +7,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.
 
 ## [Unreleased]
 
+## [3.0.1] — 2023–12–04
+
 ### Fixed
 
 - The coloring terminal output.
@@ -98,7 +100,9 @@ No significant changes
 
 - Basic functionality via a fork of the [gulp-html-bem-validator](https://github.com/dDenysS/gulp-html-bem-validator/) project.
 
-[unreleased]: https://github.com/firefoxic/gulp-html-bemlinter/compare/v2.1.4...HEAD
+[unreleased]: https://github.com/firefoxic/gulp-html-bemlinter/compare/v3.0.1...HEAD
+[3.0.1]: https://github.com/firefoxic/gulp-html-bemlinter/compare/v3.0.0...v3.0.1
+[3.0.0]: https://github.com/firefoxic/gulp-html-bemlinter/compare/v2.1.4...v3.0.0
 [2.1.4]: https://github.com/firefoxic/gulp-html-bemlinter/compare/v2.1.3...v2.1.4
 [2.1.3]: https://github.com/firefoxic/gulp-html-bemlinter/compare/v2.1.2...v2.1.3
 [2.1.2]: https://github.com/firefoxic/gulp-html-bemlinter/compare/v2.1.1...v2.1.2
