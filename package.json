@@ -33,7 +33,7 @@
 		"linter"
 	],
 	"scripts": {
-		"prepare": "husky install",
+		"prepare": "husky",
 		"lint:ec": "ec",
 		"lint:es": "eslint . --ignore-path .gitignore",
 		"lint": "pnpm /^lint:/",
@@ -46,6 +46,6 @@
 	"devDependencies": {
 		"editorconfig-checker": "^5.1.2",
 		"eslint": "^8.55.0",
-		"husky": "^8.0.3"
+		"husky": "^9.0.11"
 	}
 }
