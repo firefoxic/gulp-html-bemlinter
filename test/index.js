@@ -1,6 +1,6 @@
 import { equal } from "node:assert/strict"
-import { readFileSync } from "node:fs"
 import process from "node:process"
+import { readFileSync } from "node:fs"
 import { describe, it } from "node:test"
 
 import { htmlBemlinter, htmlBemlinterResult } from "../lib/htmlBemLinters.js"

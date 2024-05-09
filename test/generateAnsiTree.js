@@ -1,5 +1,5 @@
-import { describe, it } from "node:test"
 import { equal } from "node:assert/strict"
+import { describe, it } from "node:test"
 
 import { generateAsciiTree } from "../lib/generateAsciiTree.js"
 
@@ -8,6 +8,7 @@ describe(`generateAsciiTree`, () => {
 		const ast = {}
 		const options = {}
 		const result = generateAsciiTree(ast, options)
+
 		equal(result, ``)
 	})
 
@@ -18,6 +19,7 @@ describe(`generateAsciiTree`, () => {
 		}
 		const options = {}
 		const result = generateAsciiTree(ast, options)
+
 		equal(result, `Node 1`)
 	})
 
@@ -55,6 +57,7 @@ describe(`generateAsciiTree`, () => {
 		}
 		const options = {}
 		const result = generateAsciiTree(ast, options)
+
 		equal(result, `Root
 ├─ Node 1
 │  ├─ Node 1.1

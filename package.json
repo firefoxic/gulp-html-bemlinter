@@ -34,7 +34,7 @@
 	],
 	"scripts": {
 		"prepare": "husky",
-		"lint": "eslint . --ignore-path .gitignore",
+		"lint": "eslint",
 		"test": "node --test",
 		"pretest": "pnpm lint",
 		"preversion": "pnpm test",
@@ -42,7 +42,8 @@
 		"postpublish": "git push origin --all && git push origin --tags"
 	},
 	"devDependencies": {
-		"eslint": "^8.55.0",
+		"@firefoxic/eslint-config": "^1.0.0",
+		"eslint": "^9.2.0",
 		"husky": "^9.0.11"
 	}
 }
