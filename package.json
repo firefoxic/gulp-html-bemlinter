@@ -23,6 +23,7 @@
 	"engines": {
 		"node": "^18.12 || ^20.9"
 	},
+	"packageManager": "pnpm@9.1.0",
 	"dependencies": {
 		"chalk": "^5.3.0",
 		"node-html-parser": "^6.1.13",
