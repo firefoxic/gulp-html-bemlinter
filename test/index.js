@@ -7,9 +7,9 @@ import { htmlBemlinter, htmlBemlinterResult } from "../lib/htmlBemLinters.js"
 
 describe(`html-bem-linter`, () => {
 	it(`should fail markup with an incorrect BEM tree`, () => {
-		let html = readFileSync(new URL(`./fixtures/error-in-element-of-element.html`, import.meta.url))
+		let html = readFileSync(new URL(`./fixtures/error-complex.html`, import.meta.url))
 
-		htmlBemlinterResult({ name: `error-in-element-of-element.html`, content: html.toString() })
+		htmlBemlinterResult({ name: `error-complex.html`, content: html.toString() })
 
 		process.exitCode = process.exitCode === 1 ? 0 : 1
 	})
@@ -43,11 +43,11 @@ describe(`BEM tree`, () => {
 		equal(warningCount, 2)
 	})
 
-	it(`should contain elements of elements`, () => {
+	it(`should not contain elements of elements`, () => {
 		let html = readFileSync(new URL(`./fixtures/error-in-element-of-element.html`, import.meta.url))
 		let { warningCount } = htmlBemlinter(html.toString())
 
-		equal(warningCount, 2)
+		equal(warningCount, 1)
 	})
 
 	it(`should not contain mixes of elements with their blocks`, () => {
@@ -55,5 +55,19 @@ describe(`BEM tree`, () => {
 		let { warningCount } = htmlBemlinter(html.toString())
 
 		equal(warningCount, 1)
+	})
+
+	it(`should not contain wrong separators`, () => {
+		let html = readFileSync(new URL(`./fixtures/error-in-separators.html`, import.meta.url))
+		let { warningCount } = htmlBemlinter(html.toString())
+
+		equal(warningCount, 3)
+	})
+
+	it(`should not contain any errors`, () => {
+		let html = readFileSync(new URL(`./fixtures/error-complex.html`, import.meta.url))
+		let { warningCount } = htmlBemlinter(html.toString())
+
+		equal(warningCount, 5)
 	})
 })

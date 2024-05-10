@@ -7,6 +7,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com), and 
 
 ## [Unreleased]
 
+### Changed
+
+- The following separators are now considered invalid:
+	- single underscores that are not separators of the name and value of modifiers;
+	- double underscores within modifiers;
+	- double hyphens within modifiers.
+
 ### Fixed
 
 - Readability of the BEM tree. The tree is now painted in different colors:
