@@ -7,6 +7,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com), and 
 
 ## [Unreleased]
 
+## [4.0.0] — 2024–05–10
+
 ### Changed
 
 - The following separators are now considered invalid:
@@ -113,7 +115,8 @@ No significant changes
 
 - Basic functionality via a fork of the [gulp-html-bem-validator](https://github.com/dDenysS/gulp-html-bem-validator/) project.
 
-[Unreleased]: https://github.com/firefoxic/gulp-html-bemlinter/compare/v3.0.1...HEAD
+[Unreleased]: https://github.com/firefoxic/gulp-html-bemlinter/compare/v4.0.0...HEAD
+[4.0.0]: https://github.com/firefoxic/gulp-html-bemlinter/compare/v3.0.1...v4.0.0
 [3.0.1]: https://github.com/firefoxic/gulp-html-bemlinter/compare/v3.0.0...v3.0.1
 [3.0.0]: https://github.com/firefoxic/gulp-html-bemlinter/compare/v2.1.4...v3.0.0
 [2.1.4]: https://github.com/firefoxic/gulp-html-bemlinter/compare/v2.1.3...v2.1.4
