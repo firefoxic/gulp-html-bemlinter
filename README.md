@@ -8,8 +8,8 @@
 Gulp plugin for html linting using [BEM methodology](https://en.bem.info/methodology).
 
 <picture>
-	<source srcset="https://raw.githubusercontent.com/firefoxic/gulp-html-bemlinter/main/example/dark.webp" width="1180" height="500" media="(prefers-color-scheme: dark)">
-	<img src="https://raw.githubusercontent.com/firefoxic/gulp-html-bemlinter/main/example/light.webp" width="1180" height="500" alt="Example of html tree view output to the terminal indicating inconsistencies with the BEM methodology.">
+	<source srcset="https://raw.githubusercontent.com/firefoxic/gulp-html-bemlinter/main/example/dark.webp" media="(prefers-color-scheme: dark)">
+	<img src="https://raw.githubusercontent.com/firefoxic/gulp-html-bemlinter/main/example/light.webp" alt="Example of html tree view output to the terminal indicating inconsistencies with the BEM methodology.">
 </picture>
 
 ## Installation
