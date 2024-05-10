@@ -13,6 +13,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com), and 
 	- single underscores that are not separators of the name and value of modifiers;
 	- double underscores within modifiers;
 	- double hyphens within modifiers.
+- For better compatibility with other tools, the project is now published under [the MIT license](./LICENSE.md).
 
 ### Fixed
 
