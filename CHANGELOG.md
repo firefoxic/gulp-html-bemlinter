@@ -7,6 +7,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.
 
 ## [Unreleased]
 
+### Fixed
+
+- Readability of the BEM tree. The tree is now painted in different colors:
+	- tags — blue
+	- identifiers — yellow
+	- classes — green
+	- error texts — white/black (depending on color scheme)
+
 ## [3.0.1] — 2023–12–04
 
 ### Fixed
