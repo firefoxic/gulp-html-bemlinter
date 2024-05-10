@@ -1,6 +1,6 @@
 {
 	"name": "gulp-html-bemlinter",
-	"description": "Gulp plugin for linting a bem html",
+	"description": "Gulp plugin for html linting using BEM methodology.",
 	"version": "3.0.1",
 	"license": "MIT",
 	"author": {
