@@ -5,26 +5,26 @@ import { generateAsciiTree } from "../lib/generateAsciiTree.js"
 
 describe(`generateAsciiTree`, () => {
 	it(`should return empty string for empty AST`, () => {
-		const ast = {}
-		const options = {}
-		const result = generateAsciiTree(ast, options)
+		let ast = {}
+		let options = {}
+		let result = generateAsciiTree(ast, options)
 
 		equal(result, ``)
 	})
 
 	it(`should return ASCII representation of single node AST`, () => {
-		const ast = {
+		let ast = {
 			label: `Node 1`,
 			nodes: [],
 		}
-		const options = {}
-		const result = generateAsciiTree(ast, options)
+		let options = {}
+		let result = generateAsciiTree(ast, options)
 
 		equal(result, `Node 1`)
 	})
 
 	it(`should return correct ASCII tree representation for complex AST`, () => {
-		const ast = {
+		let ast = {
 			label: `Root`,
 			nodes: [
 				{
@@ -55,8 +55,8 @@ describe(`generateAsciiTree`, () => {
 				},
 			],
 		}
-		const options = {}
-		const result = generateAsciiTree(ast, options)
+		let options = {}
+		let result = generateAsciiTree(ast, options)
 
 		equal(result, `Root
 ├─ Node 1
