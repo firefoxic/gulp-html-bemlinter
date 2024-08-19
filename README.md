@@ -48,4 +48,4 @@ pnpm exec gulp lintBemMarkup
 [npm-image]: https://badge.fury.io/js/gulp-html-bemlinter.svg
 
 [test-url]: https://github.com/firefoxic/gulp-html-bemlinter/actions
-[test-image]: https://github.com/firefoxic/gulp-html-bemlinter/actions/workflows/test.yml/badge.svg?branch=main
+[test-image]: https://github.com/firefoxic/gulp-html-bemlinter/actions/workflows/test.yaml/badge.svg?branch=main
