@@ -30,9 +30,6 @@ importers:
       eslint:
         specifier: ^9.2.0
         version: 9.2.0
-      husky:
-        specifier: ^9.0.11
-        version: 9.0.11
 
 packages:
 
@@ -300,11 +297,6 @@ packages:
 
   he@1.2.0:
     resolution: {integrity: sha512-F/1DnUGPopORZi0ni+CvrCgHQ5FyEAHRLSApuYWMmrbSwoN2Mn/7k+Gl38gJnR7yyDZk6WLXwiGod1JOWNDKGw==}
-    hasBin: true
-
-  husky@9.0.11:
-    resolution: {integrity: sha512-AB6lFlbwwyIqMdHYhwPe+kjOC3Oc5P3nThEoW/AaO2BX3vJDjWPFxYLxokUZOo6RNX20He3AaT8sESs9NJcmEw==}
-    engines: {node: '>=18'}
     hasBin: true
 
   ignore@5.3.1:
@@ -772,8 +764,6 @@ snapshots:
   has-flag@4.0.0: {}
 
   he@1.2.0: {}
-
-  husky@9.0.11: {}
 
   ignore@5.3.1: {}
 
