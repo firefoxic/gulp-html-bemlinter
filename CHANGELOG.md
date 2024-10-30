@@ -7,6 +7,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com), and 
 
 ## [Unreleased]
 
+## [5.0.0] — 2024–10–30
+
 ### Changed
 
 - The minimum required `node.js` version has been increased to `20.13.0`, except for version `21`.
@@ -119,7 +121,8 @@ No significant changes
 
 - Basic functionality via a fork of the [gulp-html-bem-validator](https://github.com/dDenysS/gulp-html-bem-validator/) project.
 
-[Unreleased]: https://github.com/firefoxic/gulp-html-bemlinter/compare/v4.0.0...HEAD
+[Unreleased]: https://github.com/firefoxic/gulp-html-bemlinter/compare/v5.0.0...HEAD
+[5.0.0]: https://github.com/firefoxic/gulp-html-bemlinter/compare/v4.0.0...v5.0.0
 [4.0.0]: https://github.com/firefoxic/gulp-html-bemlinter/compare/v3.0.1...v4.0.0
 [3.0.1]: https://github.com/firefoxic/gulp-html-bemlinter/compare/v3.0.0...v3.0.1
 [3.0.0]: https://github.com/firefoxic/gulp-html-bemlinter/compare/v2.1.4...v3.0.0
