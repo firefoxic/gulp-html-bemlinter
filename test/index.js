@@ -68,6 +68,6 @@ describe(`BEM tree`, () => {
 		let html = readFileSync(new URL(`./fixtures/error-complex.html`, import.meta.url))
 		let { warningCount } = htmlBemlinter(html.toString())
 
-		equal(warningCount, 5)
+		equal(warningCount, 6)
 	})
 })

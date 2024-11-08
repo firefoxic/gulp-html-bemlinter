@@ -7,6 +7,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com), and 
 
 ## [Unreleased]
 
+### Fixed
+
+- Searching for elements outside their blocks now correctly recognizes the DOM tree hierarchy and considers orphaned elements as errors, including when there are matching blocks in neighboring branches of the DOM tree.
+
 ## [5.0.0] — 2024–10–30
 
 ### Changed
