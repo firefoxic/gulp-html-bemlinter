@@ -7,6 +7,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com), and 
 
 ## [Unreleased]
 
+## [5.0.1] — 2024–11–08
+
 ### Fixed
 
 - Searching for elements outside their blocks now correctly recognizes the DOM tree hierarchy and considers orphaned elements as errors, including when there are matching blocks in neighboring branches of the DOM tree.
@@ -125,7 +127,8 @@ No significant changes
 
 - Basic functionality via a fork of the [gulp-html-bem-validator](https://github.com/dDenysS/gulp-html-bem-validator/) project.
 
-[Unreleased]: https://github.com/firefoxic/gulp-html-bemlinter/compare/v5.0.0...HEAD
+[Unreleased]: https://github.com/firefoxic/gulp-html-bemlinter/compare/v5.0.1...HEAD
+[5.0.1]: https://github.com/firefoxic/gulp-html-bemlinter/compare/v5.0.0...v5.0.1
 [5.0.0]: https://github.com/firefoxic/gulp-html-bemlinter/compare/v4.0.0...v5.0.0
 [4.0.0]: https://github.com/firefoxic/gulp-html-bemlinter/compare/v3.0.1...v4.0.0
 [3.0.1]: https://github.com/firefoxic/gulp-html-bemlinter/compare/v3.0.0...v3.0.1
